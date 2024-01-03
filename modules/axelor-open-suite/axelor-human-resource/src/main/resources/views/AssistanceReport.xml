@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_6.1.xsd">
+
+  <form name="AssistanceReportForm" title="Assistance Report Generator"
+    model="com.axelor.apps.hr.db.AssistanceReport">
+    <panel name="mainPanel" title="Report Filters">
+      <field name="reportDate" title="Create report for date (Required)" widget="date"/>
+      <field name="reportEmployee"
+        title="Specific employee, as appears on time-clock records (Optional)"/>
+      <button name="btnGenerateReport" title="Generate"
+        onClick="action-assistance-report-generate"/>
+    </panel>
+    <panel name="resultsPanel" title="Results" colspan="12">
+      <field name="htmlResults" widget="html" readonly="true" showTitle="false" width="650"/>
+    </panel>
+  </form>
+
+
+  <action-view title="Assistance Report Generation" name="assistanceReport.form"
+    model="com.axelor.apps.hr.db.AssistanceReport">
+    <view type="form" name="AssistanceReportForm"/>
+  </action-view>
+
+  <action-method name="action-assistance-report-generate">
+    <call class="com.axelor.apps.hr.web.AssistanceReportController"
+      method="generateAssistanceReport"/>
+  </action-method>
+
+  <menuitem name="menu-assistanceReport" parent="hr-report-root" title="Assistance Report"
+    action="assistanceReport.form"/>
+
+</object-views>

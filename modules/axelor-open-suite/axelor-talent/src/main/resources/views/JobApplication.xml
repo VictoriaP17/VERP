@@ -8,8 +8,9 @@
     <field name="lastName"/>
     <field name="firstName"/>
     <field name="emailAddress"/>
-    <field name="fixedPhone" widget="phone" x-placeholder-number-type="FIXED_LINE"/>
-    <field name="mobilePhone" widget="phone"/>
+    <field name="fixedPhone" widget="phone" x-placeholder-number-type="FIXED_LINE"
+      x-initial-country="mx"/>
+    <field name="mobilePhone" widget="phone" x-initial-country="mx"/>
     <field name="jobPosition"/>
     <button name="resume" onClick="action-job-application-method-show-resume"
       icon="fa-file-text-o"/>
@@ -109,10 +110,10 @@
           colSpan="12">
           <panel name="contactDetailsPanel" title="Contact details" showTitle="false"
             colSpan="12">
-            <field name="mobilePhone" widget="phone" colSpan="3"/>
+            <field name="mobilePhone" widget="phone" colSpan="3" x-initial-country="mx"/>
             <field name="fixedPhone" widget="phone" colSpan="3"
-              x-placeholder-number-type="FIXED_LINE"/>
-            <field name="fax" widget="phone" colSpan="3"/>
+              x-placeholder-number-type="FIXED_LINE" x-initial-country="mx"/>
+            <field name="fax" widget="phone" colSpan="3" x-initial-country="mx"/>
             <field name="emailAddress" canRemove="false" canSelect="true" canSuggest="false"
               colSpan="3" canNew="true" canEdit="true">
               <editor x-show-titles="false">

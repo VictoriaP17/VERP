@@ -40,7 +40,7 @@
         <field name="__email" title="Email" colSpan="4"
           onChange="action-gdpr-request-group-search-person"/>
         <field name="__phone" title="Phone" widget="phone" colSpan="4"
-          onChange="action-gdpr-request-group-search-person"/>
+          onChange="action-gdpr-request-group-search-person" x-initial-country="mx"/>
         <button name="search-person-button" title="Search" icon="fa-search"
           onClick="action-gdpr-request-group-search-person" colSpan="4"/>
 

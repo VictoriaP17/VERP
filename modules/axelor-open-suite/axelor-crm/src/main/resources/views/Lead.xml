@@ -65,7 +65,8 @@
     <field name="updatedOn" hidden="true"/>
     <field name="simpleFullName"/>
     <field name="enterpriseName"/>
-    <field name="fixedPhone" widget="phone" x-placeholder-number-type="FIXED_LINE"/>
+    <field name="fixedPhone" widget="phone" x-placeholder-number-type="FIXED_LINE"
+      x-initial-country="mx"/>
     <field name="emailAddress.address"/>
     <field name="contactDate"/>
     <field name="user" form-view="user-form" grid-view="user-grid"/>
@@ -179,8 +180,8 @@
             </viewer>
           </field>
           <field name="fixedPhone" widget="phone" colSpan="4"
-            x-placeholder-number-type="FIXED_LINE"/>
-          <field name="mobilePhone" widget="phone" colSpan="4"/>
+            x-placeholder-number-type="FIXED_LINE" x-initial-country="mx"/>
+          <field name="mobilePhone" widget="phone" colSpan="4" x-initial-country="mx"/>
           <field name="emailAddress" colSpan="4" canSelect="false"
             form-view="email-address-simple-form" x-show-icons="false">
             <editor x-show-titles="false" x-viewer="true">
@@ -325,7 +326,8 @@
     <field name="name"/>
     <field name="firstName"/>
     <field name="enterpriseName"/>
-    <field name="fixedPhone" widget="phone" x-placeholder-number-type="FIXED_LINE"/>
+    <field name="fixedPhone" widget="phone" x-placeholder-number-type="FIXED_LINE"
+      x-initial-country="mx"/>
     <field name="emailAddress.address"/>
     <field name="contactDate"/>
     <field name="user" form-view="user-form" grid-view="user-grid"/>
@@ -342,8 +344,9 @@
     <field name="name"/>
     <field name="firstName"/>
     <field name="enterpriseName"/>
-    <field name="fixedPhone" widget="phone" x-placeholder-number-type="FIXED_LINE"/>
-    <field name="mobilePhone" widget="phone"/>
+    <field name="fixedPhone" widget="phone" x-placeholder-number-type="FIXED_LINE"
+      x-initial-country="mx"/>
+    <field name="mobilePhone" widget="phone" x-initial-country="mx"/>
     <field name="emailAddress.address"/>
     <button name="scheduleEventBtn" title="Schedule Event" icon="fa-group"
       onClick="action-lead-view-schedule-event"/>

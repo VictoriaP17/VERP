@@ -7,7 +7,8 @@
     <field name="name"/>
     <field name="firstName"/>
     <field name="enterpriseName"/>
-    <field name="fixedPhone" widget="phone" x-placeholder-number-type="FIXED_LINE"/>
+    <field name="fixedPhone" widget="phone" x-placeholder-number-type="FIXED_LINE"
+      x-initial-country="mx"/>
     <field name="emailAddress.address"/>
     <field name="contactDate"/>
     <field name="user" form-view="user-form" grid-view="user-grid"/>

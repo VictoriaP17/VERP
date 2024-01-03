@@ -19,7 +19,8 @@
     </toolbar>
     <field name="partnerSeq" width="120"/>
     <field name="simpleFullName"/>
-    <field name="fixedPhone" widget="phone" x-placeholder-number-type="FIXED_LINE"/>
+    <field name="fixedPhone" widget="phone" x-placeholder-number-type="FIXED_LINE"
+      x-initial-country="mx"/>
     <field name="emailAddress.address" title="Email"/>
     <field name="partnerCategory" grid-view="partner-category-grid"
       form-view="partner-category-form"/>
@@ -53,7 +54,8 @@
     </menubar>
     <field name="partnerSeq" width="120"/>
     <field name="simpleFullName" width="300"/>
-    <field name="fixedPhone" widget="phone" x-placeholder-number-type="FIXED_LINE"/>
+    <field name="fixedPhone" widget="phone" x-placeholder-number-type="FIXED_LINE"
+      x-initial-country="mx"/>
     <field name="emailAddress.address" placeholder="whatever@example.com" title="Email"/>
     <field name="partnerCategory" grid-view="partner-category-grid"
       form-view="partner-category-form"/>
@@ -85,7 +87,8 @@
     </menubar>
     <field name="partnerSeq" width="120"/>
     <field name="simpleFullName"/>
-    <field name="fixedPhone" widget="phone" x-placeholder-number-type="FIXED_LINE"/>
+    <field name="fixedPhone" widget="phone" x-placeholder-number-type="FIXED_LINE"
+      x-initial-country="mx"/>
     <field name="emailAddress.address" placeholder="whatever@example.com" title="Email"/>
     <field name="partnerCategory" grid-view="partner-category-grid"
       form-view="partner-category-form"/>
@@ -111,8 +114,9 @@
     </toolbar>
     <field name="partnerSeq" width="120"/>
     <field name="simpleFullName"/>
-    <field name="fixedPhone" widget="phone" x-placeholder-number-type="FIXED_LINE"/>
-    <field name="mobilePhone" widget="phone"/>
+    <field name="fixedPhone" widget="phone" x-placeholder-number-type="FIXED_LINE"
+      x-initial-country="mx"/>
+    <field name="mobilePhone" widget="phone" x-initial-country="mx"/>
     <field name="emailAddress.address" placeholder="whatever@example.com" title="Email"/>
     <field name="mainPartner.simpleFullName" title="Main company"/>
     <field name="jobTitleFunction"/>
@@ -128,8 +132,9 @@
     groupBy="user">
     <field name="partnerSeq" width="120"/>
     <field name="simpleFullName"/>
-    <field name="fixedPhone" widget="phone" x-placeholder-number-type="FIXED_LINE"/>
-    <field name="mobilePhone" widget="phone"/>
+    <field name="fixedPhone" widget="phone" x-placeholder-number-type="FIXED_LINE"
+      x-initial-country="mx"/>
+    <field name="mobilePhone" widget="phone" x-initial-country="mx"/>
     <field name="emailAddress.address" title="Email"/>
     <field name="user" form-view="user-form" grid-view="user-grid"/>
   </grid>
@@ -422,8 +427,9 @@
         </panel>
         <panel name="generalContactDetailsPanel" title="General contact details" colSpan="12">
           <field name="fixedPhone" colSpan="3" widget="phone"
-            x-placeholder-number-type="FIXED_LINE"/>
-          <field name="mobilePhone" colSpan="3" hideIf="partnerTypeSelect == 1" widget="phone"/>
+            x-placeholder-number-type="FIXED_LINE" x-initial-country="mx"/>
+          <field name="mobilePhone" colSpan="3" hideIf="partnerTypeSelect == 1" widget="phone"
+            x-initial-country="mx"/>
           <field name="emailAddress" canSelect="false" colSpan="6"
             form-view="email-address-simple-form" x-show-icons="false">
             <editor x-show-titles="false">
@@ -714,8 +720,9 @@
         <field name="jobTitleFunction" onChange="action-record-base-partner-set-business-card"/>
         <field name="functionBusinessCard"/>
         <field name="reportsTo" domain="self.isContact = true"/>
-        <field name="fixedPhone" widget="phone" x-placeholder-number-type="FIXED_LINE"/>
-        <field name="mobilePhone" widget="phone"/>
+        <field name="fixedPhone" widget="phone" x-placeholder-number-type="FIXED_LINE"
+          x-initial-country="mx"/>
+        <field name="mobilePhone" widget="phone" x-initial-country="mx"/>
         <field name="emailAddress" canSelect="false" form-view="email-address-simple-form"
           x-show-icons="false">
           <editor x-show-titles="false">
@@ -865,7 +872,7 @@
     <field name="fullName"/>
     <field name="picture"/>
     <field name="fixedPhone"/>
-    <field name="mobilePhone"/>
+    <field name="mobilePhone" x-initial-country="mx"/>
     <field name="emailAddress.address" title="Email"/>
     <field name="mainPartner.simpleFullName"/>
     <field name="partnerCategory"/>
@@ -1065,8 +1072,9 @@
     <!-- name/firstName/fixedPhone/mobilePhone/emailAddress.address -->
     <field name="name"/>
     <field name="firstName"/>
-    <field name="fixedPhone" widget="phone" x-placeholder-number-type="FIXED_LINE"/>
-    <field name="mobilePhone" widget="phone"/>
+    <field name="fixedPhone" widget="phone" x-placeholder-number-type="FIXED_LINE"
+      x-initial-country="mx"/>
+    <field name="mobilePhone" widget="phone" x-initial-country="mx"/>
     <field name="emailAddress.address" title="Email"/>
   </grid>
 
@@ -1126,8 +1134,9 @@
       <panel name="contactDetailsPanel" title="Contact details">
         <field name="jobTitleFunction"/>
         <field name="reportsTo" domain="self.isContact = true"/>
-        <field name="fixedPhone" widget="phone" x-placeholder-number-type="FIXED_LINE"/>
-        <field name="mobilePhone" widget="phone"/>
+        <field name="fixedPhone" widget="phone" x-placeholder-number-type="FIXED_LINE"
+          x-initial-country="mx"/>
+        <field name="mobilePhone" widget="phone" x-initial-country="mx"/>
         <field name="emailAddress" canSelect="false" form-view="email-address-simple-form"
           x-show-icons="false">
           <editor x-show-titles="false">

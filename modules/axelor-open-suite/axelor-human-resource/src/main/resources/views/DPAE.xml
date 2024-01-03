@@ -15,7 +15,8 @@
       <field name="mainActivityCode" colSpan="3"/>
       <field name="company"/>
       <field name="companyAddress"/>
-      <field name="companyFixedPhone" widget="phone" x-placeholder-number-type="FIXED_LINE"/>
+      <field name="companyFixedPhone" widget="phone" x-placeholder-number-type="FIXED_LINE"
+        x-initial-country="mx"/>
       <field name="healthService"/>
       <field name="healthServiceAddress"/>
     </panel>

@@ -12,8 +12,8 @@
     <field name="contactPartner.partnerSeq" width="120"/>
     <field name="contactPartner.simpleFullName"/>
     <field name="contactPartner.fixedPhone" widget="phone"
-      x-placeholder-number-type="FIXED_LINE"/>
-    <field name="contactPartner.mobilePhone" widget="phone"/>
+      x-placeholder-number-type="FIXED_LINE" x-initial-country="mx"/>
+    <field name="contactPartner.mobilePhone" widget="phone" x-initial-country="mx"/>
     <field name="managerUser" form-view="user-form" grid-view="user-grid"/>
     <field name="mainEmploymentContract.companyDepartment" form-view="company-department-form"
       grid-view="company-department-grid"/>
@@ -80,8 +80,8 @@
               pattern="^(?:http(?:s)?://)?\S+(?:\.\S+)+$"/>
 
             <field name="fixedPhone" widget="phone" colSpan="4"
-              x-placeholder-number-type="FIXED_LINE"/>
-            <field name="mobilePhone" widget="phone" colSpan="4"/>
+              x-placeholder-number-type="FIXED_LINE" x-initial-country="mx"/>
+            <field name="mobilePhone" widget="phone" colSpan="4" x-initial-country="mx"/>
           </panel>
         </editor>
       </field>
@@ -90,9 +90,9 @@
     <!-- Basic info -->
     <panel name="phoneProSBSPanel" title="Work phones" showIf="stepByStepSelect == 1">
       <field name="fixedProPhone" widget="phone" colSpan="4"
-        x-placeholder-number-type="FIXED_LINE"/>
-      <field name="mobileProPhone" widget="phone" colSpan="4"/>
-      <field name="phoneAtCustomer" widget="phone" colSpan="4"/>
+        x-placeholder-number-type="FIXED_LINE" x-initial-country="mx"/>
+      <field name="mobileProPhone" widget="phone" colSpan="4" x-initial-country="mx"/>
+      <field name="phoneAtCustomer" widget="phone" colSpan="4" x-initial-country="mx"/>
     </panel>
 
     <panel name="personalInfoSBSPanel" title="Personal information"
@@ -117,7 +117,7 @@
     <panel name="emergencyContactSBSPanel" title="Contact in case of emergency"
       showIf="stepByStepSelect == 1">
       <field name="emergencyContact" colSpan="4"/>
-      <field name="emergencyNumber" widget="phone" colSpan="4"/>
+      <field name="emergencyNumber" widget="phone" colSpan="4" x-initial-country="mx"/>
       <field name="emergencyContactRelationship" colSpan="4" title="Relationship"/>
     </panel>
 
@@ -270,8 +270,8 @@
                 pattern="^(?:http(?:s)?://)?\S+(?:\.\S+)+$"/>
 
               <field name="fixedPhone" widget="phone" colSpan="4"
-                x-placeholder-number-type="FIXED_LINE"/>
-              <field name="mobilePhone" widget="phone" colSpan="4"/>
+                x-placeholder-number-type="FIXED_LINE" x-initial-country="mx"/>
+              <field name="mobilePhone" widget="phone" colSpan="4" x-initial-country="mx"/>
             </panel>
           </editor>
         </field>
@@ -296,9 +296,9 @@
       <panel name="informationPanel" title="Information">
         <panel name="phoneProPanel" title="Work phones" colSpan="12">
           <field name="fixedProPhone" widget="phone" colSpan="4"
-            x-placeholder-number-type="FIXED_LINE"/>
-          <field name="mobileProPhone" widget="phone" colSpan="4"/>
-          <field name="phoneAtCustomer" widget="phone" colSpan="4"/>
+            x-placeholder-number-type="FIXED_LINE" x-initial-country="mx"/>
+          <field name="mobileProPhone" widget="phone" colSpan="4" x-initial-country="mx"/>
+          <field name="phoneAtCustomer" widget="phone" colSpan="4" x-initial-country="mx"/>
         </panel>
 
         <panel name="personalInfoPanel" title="Personal information" colSpan="12">
@@ -321,7 +321,7 @@
 
         <panel name="emergencyContactPanel" title="Contact in case of emergency" colSpan="12">
           <field name="emergencyContact" colSpan="4"/>
-          <field name="emergencyNumber" widget="phone" colSpan="4"/>
+          <field name="emergencyNumber" widget="phone" colSpan="4" x-initial-country="mx"/>
           <field name="emergencyContactRelationship" colSpan="4" title="Relationship"/>
         </panel>
 
