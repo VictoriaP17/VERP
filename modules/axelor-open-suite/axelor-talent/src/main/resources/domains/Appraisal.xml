@@ -18,6 +18,42 @@
       readonly="true"/>
     <boolean name="isTemplate" title="Is template"/>
 
+    <!--Added by ADA for KPI personalization -->
+    <integer name="projectPercentage"/>
+    <integer name="functionalPercentage"/>
+    <integer name="functionalDivisionsNo"/>
+    <integer name="functionalDivisionsAccum"/>
+    <boolean name="functionalDivisionCheck0"/>
+    <string name="functionalDivisionName0"/>
+    <integer name="functionalDivisionValue0"/>
+    <boolean name="functionalDivisionCheck1"/>
+    <string name="functionalDivisionName1"/>
+    <integer name="functionalDivisionValue1"/>
+    <boolean name="functionalDivisionCheck2"/>
+    <string name="functionalDivisionName2"/>
+    <integer name="functionalDivisionValue2"/>
+    <boolean name="functionalDivisionCheck3"/>
+    <string name="functionalDivisionName3"/>
+    <integer name="functionalDivisionValue3"/>
+    <boolean name="functionalDivisionCheck4"/>
+    <string name="functionalDivisionName4"/>
+    <integer name="functionalDivisionValue4"/>
+    <boolean name="functionalDivisionCheck5"/>
+    <string name="functionalDivisionName5"/>
+    <integer name="functionalDivisionValue5"/>
+    <boolean name="functionalDivisionCheck6"/>
+    <string name="functionalDivisionName6"/>
+    <integer name="functionalDivisionValue6"/>
+    <boolean name="functionalDivisionCheck7"/>
+    <string name="functionalDivisionName7"/>
+    <integer name="functionalDivisionValue7"/>
+    <boolean name="functionalDivisionCheck8"/>
+    <string name="functionalDivisionName8"/>
+    <integer name="functionalDivisionValue8"/>
+    <boolean name="functionalDivisionCheck9"/>
+    <string name="functionalDivisionName9"/>
+    <integer name="functionalDivisionValue9"/>
+
     <extra-code><![CDATA[
 
 	   	// TYPE SELECT

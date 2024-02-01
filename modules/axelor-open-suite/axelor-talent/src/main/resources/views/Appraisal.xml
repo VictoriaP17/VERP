@@ -21,7 +21,7 @@
   </grid>
 
   <form name="appraisal-form" title="Appraisal" model="com.axelor.apps.talent.db.Appraisal"
-    width="large">
+    width="large" onNew="action-appraisal-onnew" onSave="action-method-appraisal-onSave">
     <panel name="actionPanel">
       <field name="statusSelect" colSpan="8" widget="NavSelect" showTitle="false"/>
       <panel name="subActionPanel" colSpan="4" stacked="true">
@@ -42,6 +42,89 @@
       <field name="appraisalType" canEdit="false" canNew="false"/>
       <field name="toDate"/>
       <field name="reviewerEmployee" canEdit="false" canNew="false"/>
+
+      <!--Added by ADA for KPI personalization -->
+      <panel name="percentagePanel" title="Percentages">
+        <field name="projectPercentage" title="Project %" readonly="true"/>
+        <field name="functionalPercentage" title="Functional %" readonly="true"/>
+        <field name="functionalDivisionsAccum"
+          title="Functional subdivisions cumulative subpercentage" readonly="true"/>
+
+        <spacer/>
+
+        <field name="functionalDivisionCheck0" showTitle="false" colSpan="1"
+          onChange="action-group-division0-onchange"/>
+        <field name="functionalDivisionName0" title="Functional Division 1 Name" colSpan="6"
+          readonly="true"/>
+        <field name="functionalDivisionValue0" title="Functional Division 1 Value" min="0"
+          colSpan="5" max="99" onChange="action-appraisal-functionalDivisionValue-onchange"
+          readonly="true"/>
+        <field name="functionalDivisionCheck1" showTitle="false" colSpan="1"
+          onChange="action-group-division1-onchange"/>
+        <field name="functionalDivisionName1" title="Functional Division 2 Name" colSpan="6"
+          readonly="true"/>
+        <field name="functionalDivisionValue1" title="Functional Division 2 Value" min="0"
+          readonly="true" colSpan="5" max="99"
+          onChange="action-appraisal-functionalDivisionValue-onchange"/>
+        <field name="functionalDivisionCheck2" showTitle="false" colSpan="1"
+          onChange="action-group-division2-onchange"/>
+        <field name="functionalDivisionName2" title="Functional Division 3 Name" colSpan="6"
+          readonly="true"/>
+        <field name="functionalDivisionValue2" title="Functional Division 3 Value" min="0"
+          readonly="true" colSpan="5" max="99"
+          onChange="action-appraisal-functionalDivisionValue-onchange"/>
+        <field name="functionalDivisionCheck3" showTitle="false" colSpan="1"
+          onChange="action-group-division3-onchange"/>
+        <field name="functionalDivisionName3" title="Functional Division 4 Name" colSpan="6"
+          readonly="true"/>
+        <field name="functionalDivisionValue3" title="Functional Division 4 Value" min="0"
+          readonly="true" colSpan="5" max="99"
+          onChange="action-appraisal-functionalDivisionValue-onchange"/>
+        <field name="functionalDivisionCheck4" showTitle="false" colSpan="1"
+          onChange="action-group-division4-onchange"/>
+        <field name="functionalDivisionName4" title="Functional Division 5 Name" colSpan="6"
+          readonly="true"/>
+        <field name="functionalDivisionValue4" title="Functional Division 5 Value" min="0"
+          readonly="true" colSpan="5" max="99"
+          onChange="action-appraisal-functionalDivisionValue-onchange"/>
+        <field name="functionalDivisionCheck5" showTitle="false" colSpan="1"
+          onChange="action-group-division5-onchange"/>
+        <field name="functionalDivisionName5" title="Functional Division 6 Name" colSpan="6"
+          readonly="true"/>
+        <field name="functionalDivisionValue5" title="Functional Division 6 Value" min="0"
+          readonly="true" colSpan="5" max="99"
+          onChange="action-appraisal-functionalDivisionValue-onchange"/>
+        <field name="functionalDivisionCheck6" showTitle="false" colSpan="1"
+          onChange="action-group-division6-onchange"/>
+        <field name="functionalDivisionName6" title="Functional Division 7 Name" colSpan="6"
+          readonly="true"/>
+        <field name="functionalDivisionValue6" title="Functional Division 7 Value" min="0"
+          readonly="true" colSpan="5" max="99"
+          onChange="action-appraisal-functionalDivisionValue-onchange"/>
+        <field name="functionalDivisionCheck7" showTitle="false" colSpan="1"
+          onChange="action-group-division7-onchange"/>
+        <field name="functionalDivisionName7" title="Functional Division 8 Name" colSpan="6"
+          readonly="true"/>
+        <field name="functionalDivisionValue7" title="Functional Division 8 Value" min="0"
+          readonly="true" colSpan="5" max="99"
+          onChange="action-appraisal-functionalDivisionValue-onchange"/>
+        <field name="functionalDivisionCheck8" showTitle="false" colSpan="1"
+          onChange="action-group-division8-onchange"/>
+        <field name="functionalDivisionName8" title="Functional Division 9 Name" colSpan="6"
+          readonly="true"/>
+        <field name="functionalDivisionValue8" title="Functional Division 9 Value" min="0"
+          readonly="true" colSpan="5" max="99"
+          onChange="action-appraisal-functionalDivisionValue-onchange"/>
+        <field name="functionalDivisionCheck9" showTitle="false" colSpan="1"
+          onChange="action-group-division9-onchange"/>
+        <field name="functionalDivisionName9" title="Functional Division 10 Name" colSpan="6"
+          readonly="true"/>
+        <field name="functionalDivisionValue9" title="Functional Division 10 Value" min="0"
+          readonly="true" colSpan="5" max="99"
+          onChange="action-appraisal-functionalDivisionValue-onchange"/>
+      </panel>
+
+
       <field name="description" colSpan="12" widget="html"/>
       <field name="attrs" colSpan="12"/>
     </panel>
@@ -86,6 +169,10 @@
     <field name="employee"/>
   </calendar>
 
+  <action-method name="action-appraisal-onnew">
+    <call class="com.axelor.apps.talent.web.AppraisalController" method="onNew"/>
+  </action-method>
+
   <action-method name="action-appraisal-method-send-appraisal">
     <call class="com.axelor.apps.talent.web.AppraisalController" method="send"/>
   </action-method>
@@ -112,6 +199,10 @@
     <context name="_templateId" expr="eval:id"/>
   </action-view>
 
+  <action-method name="action-method-appraisal-onSave">
+    <call class="com.axelor.apps.talent.web.AppraisalController" method="onSave"/>
+  </action-method>
+
   <action-method name="action-appraisal-template-method-create-appraisals">
     <call class="com.axelor.apps.talent.web.AppraisalController" method="createAppraisals"/>
   </action-method>
@@ -131,6 +222,100 @@
     <field name="company" expr="eval:employee?.mainEmploymentContract?.payCompany"/>
   </action-record>
 
+  <action-group name="action-group-division0-onchange">
+    <action name="action-appraisal-divisionChange0-onchange"/>
+    <action name="action-appraisal-functionalDivisionValue-onchange"/>
+  </action-group>
+
+  <action-group name="action-group-division1-onchange">
+    <action name="action-appraisal-divisionChange1-onchange"/>
+    <action name="action-appraisal-functionalDivisionValue-onchange"/>
+  </action-group>
+
+  <action-group name="action-group-division2-onchange">
+    <action name="action-appraisal-divisionChange2-onchange"/>
+    <action name="action-appraisal-functionalDivisionValue-onchange"/>
+  </action-group>
+
+  <action-group name="action-group-division3-onchange">
+    <action name="action-appraisal-divisionChange3-onchange"/>
+    <action name="action-appraisal-functionalDivisionValue-onchange"/>
+  </action-group>
+
+  <action-group name="action-group-division4-onchange">
+    <action name="action-appraisal-divisionChange4-onchange"/>
+    <action name="action-appraisal-functionalDivisionValue-onchange"/>
+  </action-group>
+
+  <action-group name="action-group-division5-onchange">
+    <action name="action-appraisal-divisionChange5-onchange"/>
+    <action name="action-appraisal-functionalDivisionValue-onchange"/>
+  </action-group>
+
+  <action-group name="action-group-division6-onchange">
+    <action name="action-appraisal-divisionChange6-onchange"/>
+    <action name="action-appraisal-functionalDivisionValue-onchange"/>
+  </action-group>
+
+  <action-group name="action-group-division7-onchange">
+    <action name="action-appraisal-divisionChange7-onchange"/>
+    <action name="action-appraisal-functionalDivisionValue-onchange"/>
+  </action-group>
+
+  <action-group name="action-group-division8-onchange">
+    <action name="action-appraisal-divisionChange8-onchange"/>
+    <action name="action-appraisal-functionalDivisionValue-onchange"/>
+  </action-group>
+
+  <action-group name="action-group-division9-onchange">
+    <action name="action-appraisal-divisionChange9-onchange"/>
+    <action name="action-appraisal-functionalDivisionValue-onchange"/>
+  </action-group>
+
+  <action-method name="action-appraisal-divisionChange0-onchange">
+    <call class="com.axelor.apps.talent.web.AppraisalController" method="lockUnlockDivision0"/>
+  </action-method>
+
+  <action-method name="action-appraisal-divisionChange1-onchange">
+    <call class="com.axelor.apps.talent.web.AppraisalController" method="lockUnlockDivision1"/>
+  </action-method>
+
+  <action-method name="action-appraisal-divisionChange2-onchange">
+    <call class="com.axelor.apps.talent.web.AppraisalController" method="lockUnlockDivision2"/>
+  </action-method>
+
+  <action-method name="action-appraisal-divisionChange3-onchange">
+    <call class="com.axelor.apps.talent.web.AppraisalController" method="lockUnlockDivision3"/>
+  </action-method>
+
+  <action-method name="action-appraisal-divisionChange4-onchange">
+    <call class="com.axelor.apps.talent.web.AppraisalController" method="lockUnlockDivision4"/>
+  </action-method>
+
+  <action-method name="action-appraisal-divisionChange5-onchange">
+    <call class="com.axelor.apps.talent.web.AppraisalController" method="lockUnlockDivision5"/>
+  </action-method>
+
+  <action-method name="action-appraisal-divisionChange6-onchange">
+    <call class="com.axelor.apps.talent.web.AppraisalController" method="lockUnlockDivision6"/>
+  </action-method>
+
+  <action-method name="action-appraisal-divisionChange7-onchange">
+    <call class="com.axelor.apps.talent.web.AppraisalController" method="lockUnlockDivision7"/>
+  </action-method>
+
+  <action-method name="action-appraisal-divisionChange8-onchange">
+    <call class="com.axelor.apps.talent.web.AppraisalController" method="lockUnlockDivision8"/>
+  </action-method>
+
+  <action-method name="action-appraisal-divisionChange9-onchange">
+    <call class="com.axelor.apps.talent.web.AppraisalController" method="lockUnlockDivision9"/>
+  </action-method>
+
+  <action-method name="action-appraisal-functionalDivisionValue-onchange">
+    <call class="com.axelor.apps.talent.web.AppraisalController"
+      method="calculateCumulativeSubpercentage"/>
+  </action-method>
 
   <search-filters name="appraisal-fitlers"
     model="com.axelor.apps.talent.db.Appraisal" title="Appraisal filters">
